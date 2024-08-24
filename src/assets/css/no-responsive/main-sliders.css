@@ -1,0 +1,176 @@
+.main-area-swipers {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.main-area-swipers-wrapper { 
+    padding: 20px 0;
+}
+.main-area-slides-bg-container {
+    line-height: 1;
+}
+.main-area-slides-bg , .trending-movie-bg , .trending-bg , .trending-info-swiper-slide-bg {
+    width: 100%;
+    height: 100%;
+}
+.main-area-slides {
+    z-index: 1;
+    line-height: 1;
+    transition: all .6s ease-in-out;
+}
+.main-area-first-slide-per-view {
+    transform-origin: 0 50%;
+}
+.main-area-last-slide-per-view {
+    transform-origin: 100% 50%;
+}
+.main-area-slides::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(83, 100, 141, 0) 100%);
+    transition: all .6s ease-in-out;
+}
+.main-area-slides:hover {
+    box-shadow: 0 0 12px rgba(0 , 0 , 0 , 0.9);
+    z-index: 99;
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    border-left: 5px solid #e50914;
+}
+.main-area-slides:hover::after {
+    background-color: rgba(0 , 0 , 0 , 0.8);
+}
+.main-area-slides-info-container , .main-area-slides-widgets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.main-area-slides-info-container {
+    left: 25px;
+}
+.main-area-slides-widgets-container {
+    opacity: 0;
+    right: 25px;
+    width: 40px;
+    transition: all .45s ease-in-out;
+}
+.main-area-slides:hover .main-area-slides-widgets-container {
+    align-items: center;
+    opacity: 1;
+}
+.show-main-area-slides-widgets-container {
+    display: flex;
+}
+.main-area-siles-widget {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    margin-bottom: 7px;
+    border: 5px solid #6c757d;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.main-area-siles-widget:hover {
+    background-color: #e50914;
+}
+.main-area-siles-widget:hover::before {
+    color: #fff;
+}
+.social-medias {
+    position: absolute;
+    right: 75%;
+    z-index: -1;
+    background-color: #191919;
+    width: 0;
+    height: 2.2em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: width .4s ease-in-out;
+}
+.show-social-medias {
+    cursor: default;
+    width: 100px;
+}
+.social-media {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 0;
+    margin-right: 12px;
+}
+.share-nodes::before {
+    color: #d7d3f8 !important;
+    font-size: 16px !important;
+}
+.main-area-slides-info {
+    margin: .5rem 0;
+}
+.main-area-icon-play {
+    padding-top: 1px;
+    margin-right: 0.5rem;
+}
+.main-area-icon-play::before , .main-area-play-now-text {
+    font-size: 12px;
+}
+.main-area-slides-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    transition: all .3s ease-in-out;
+}
+.main-area-film-rating , .main-area-movie-time {
+    color: #fff;
+    font-size: 14px;
+}
+.main-area-film-rating {
+    background-color: #6c757d;
+    font-weight: 700;
+    padding: .25rem;
+    margin-right: .5rem;
+    border-radius: .25rem;    
+}
+.main-area-swipers-btn-prev , .main-area-swipers-btn-next , .trending-info-swiper-slide-prev , .trending-info-swiper-slide-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 35px;
+    height: 60px;
+    top: calc(50% - 35px / 2) !important;
+}
+.main-area-swipers-btn-prev , .trending-info-swiper-slide-prev {
+    left: 0 !important;
+}
+.main-area-swipers-btn-next , .trending-info-swiper-slide-next {
+    right: 0 !important;
+}
+
+.main-silders-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.main-silders-title {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+.view-all-link {
+    color: #d1d0cf;
+    font-size: 16px;
+    font-weight: 100;
+    transition: all .3s ease-in-out;
+}

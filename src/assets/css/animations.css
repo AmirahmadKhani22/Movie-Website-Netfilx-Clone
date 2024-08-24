@@ -1,0 +1,75 @@
+@keyframes trending-info-wrapper-show-effect {
+    from {
+        -moz-transform: translateY(2000px);
+        transform: translateY(2000px);
+        opacity: 0;
+    }
+    to {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes trending-info-bg-show-effect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes new-top-viwe-trailer-show-effect {
+    from {
+        opacity: 0;
+        z-index: -4;
+    }
+    to {
+        opacity: 1;
+        z-index: 99;
+    }
+}
+@keyframes new-top-viwe-trailer-hide-effect {
+    from {
+        opacity: 1;
+        z-index: 99;
+    }
+    to {
+        opacity: 0;
+        z-index: -4;
+    }
+}
+
+@keyframes header-fadeInLeft {
+    from {
+        -moz-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    to {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes header-fadeInUp {
+    from {
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    to {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.header-fadeInLeft , .header-fadeInUp {
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+.header-fadeInLeft {
+    animation-name: header-fadeInLeft;
+    animation-delay: 0.5s;
+}
+.header-fadeInUp {
+    animation-name: header-fadeInUp;
+}

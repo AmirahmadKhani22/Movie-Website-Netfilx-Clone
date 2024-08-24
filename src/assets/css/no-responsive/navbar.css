@@ -1,0 +1,302 @@
+.navbar-container {
+    position: fixed;
+    background-color: rgba(20, 20, 20, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+}
+.nav-logo-container {
+    box-sizing: content-box;
+    padding:0 10px 0 105px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 160px;
+}
+.nav-toggle-menu-container , .nav-toggle-accessibility {
+    display: none;
+}
+.nav-menu-container {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.nav-menu-item-text , .nav-contact-us-menu-item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #d1d0cf;
+    cursor: pointer;
+    align-self: center;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.nav-menu-item {
+    margin-right: 32px;
+}
+.nav-menu-item:last-child {
+    margin: 0;
+}
+#nav-menu-contact-us {
+    position: relative;
+}
+.nav-contact-us-menu {
+    display: none;
+}
+#nav-menu-contact-us:hover .nav-contact-us-menu {
+    display: block;
+    width: 256px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 500;
+    background-color: #141414;
+    list-style: none;
+    padding: 20px 15px 0;
+}
+.nav-contact-us-menu-item-text::before {
+    width: 0;
+    content: " ";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #bf000a;
+    transition: all .5s ease-in-out;
+}
+.nav-contact-us-menu-item:hover .nav-contact-us-menu-item-text::before {
+    width: 5px;
+}
+.nav-contact-us-menu-item-text::after {
+    width: 0;
+    content: " ";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image: linear-gradient(270deg, rgba(11, 1, 2, 0) 0%, rgba(255, 55, 65, 0.3) 100%);
+    transition: all .5s ease-in-out;
+}
+.nav-contact-us-menu-item:hover .nav-contact-us-menu-item-text::after {
+    width: 100%;
+}
+.nav-menu-item:hover .nav-menu-item-text , .nav-contact-us-menu-item:hover .nav-contact-us-menu-item-text {
+    color: #bf000a;
+}
+.nav-contact-us-menu-item-text {
+    align-items: center;
+}
+.nav-contact-us-menu-item {
+    height: 40px;
+    width: 100%;
+    padding-left: 15px;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+.nav-accessibility-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 55px;
+}
+.nav-accessibilities {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.nav-accessibility-menu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav-accessibility-menu:nth-child(even) {
+    margin-right: 7px;
+}
+#nav-search-bar-area {
+    position: relative;
+    width: 35px;
+    margin-right: 7px;
+}
+#search-icon::before , .bell::before {
+    color: #d1d0cf;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+#search-icon:hover::before {
+    color: #bf000a;
+}
+#search-bar-container {
+    display: none;
+    position: absolute;
+    left: -375px;
+    z-index: 1;
+    top: 130%;
+}
+.search-bar-visible {
+    display: flex !important;
+}
+#search-bar-icon {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+#search-bar {
+    width: 400px;
+    height: 40px;
+    padding: 5px 15px 5px 45px;
+    border: none;
+    background-color: #141414;
+    color: #fff;
+    letter-spacing: 1.5px;
+    outline: none;
+}
+#search-bar::-webkit-search-cancel-button {
+    appearance: none;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background-image: url("./../../img/eraser.svg") !important;
+    background-position: center center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+#nav-alarm-area {
+    margin-right: 17px;
+}
+#nav-alarm-area:hover .icon-bell::before { 
+    color: #bf000a;
+}
+#notif-container {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    width: 300px;
+    position: absolute;
+    background-color: #141414;
+    top: 100%;
+    right: 15px;
+    z-index: 2;
+    box-shadow: 0 0 20px 0 rgba(0 , 0 , 0 , 0.5)
+}
+.show-notif{
+    display: flex !important;
+}
+.notif-link {
+    padding: 15px;
+    display: flex;
+    border: 1px solid;
+    border-width: 0 0 1px 0;
+    border-image-slice: 1;
+    border-image-source: 
+    linear-gradient(to right, rgba(209, 208, 207, 0.6), rgba(209, 208, 207, 0.3), rgba(209, 208, 207, 0));
+}
+.notif-img-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.notif-img {
+    width: 100%;
+}
+.notif-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.notif-info-title {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+.notif-recieve-time {
+    color: #d1d0cf;
+    font-size: 12px;
+    font-weight: 400;
+}
+#receive-alarm {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: #bf000a;
+    width: 10px;
+    height: 10px;
+}
+#user-profile {
+    width: 39px;
+    border-radius: 50%;
+}
+#profile-settings-container {
+    width: 300px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+    right: 15px;
+    background-color: #191919;
+    box-shadow: 0 0 20px 0 rgba(0 , 0 , 0 , 0.5);
+    padding: 0 1rem;
+}
+.show-profile-settings {
+    display: flex !important;
+}
+.profile-settings-links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 15px 15px 0;
+    border: 1px solid;
+    border-width: 0 0 1px 0;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgba(209, 208, 207, 0.6), rgba(209, 208, 207, 0.3), rgba(209, 208, 207, 0));
+}
+.profile-settings-links:last-child {
+    border: none;
+}
+.profile-icons {
+    text-align: center;
+    width: 20px;
+}
+.profile-settings-text {
+    margin-left: 0.5rem;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}

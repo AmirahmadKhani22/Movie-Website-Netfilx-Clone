@@ -1,0 +1,410 @@
+.trending-title {
+    padding: 0 15px;
+}
+.trending-swiper {
+    width: 100%;
+    height: 100%;
+}
+.trending-swiper-wrapper {
+    padding: 35px 0;
+}
+.trending-swiper-slide {
+    cursor: pointer;
+    z-index: 1;
+    -moz-transform: scale(1);
+    transform: scale(1);
+    transition: all .6s ease-in-out;
+}
+.trending-swiper-slide-active {
+    z-index: 99;
+    /*padding: 10px;
+    border: 1px solid #5d5757;*/
+    -moz-transform: scale(1.25) !important;
+    transform: scale(1.25) !important;
+    background-color: rgba(20, 20, 20, 0.5);
+    outline: 1px solid #5d5757;
+    outline-offset: 10px;
+}
+.trending-bg-container {
+    display: flex;
+}
+.trending-bg {
+    width: 100%;
+}
+.trending-info-container {
+    position: relative;
+    margin-top: 20px;
+}
+.trending-info-area-container {
+    position: relative;
+    margin: 20px 0 40px;
+    overflow: hidden;
+}
+.trending-info-navbar-container {
+    width: 100%;
+    background-color: rgba(0 , 0 , 0 , 0.25);
+}
+.trending-info-navbar-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.trending-info-navbar-menu {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    margin: 0 15px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+.trending-info-navbar-menu:hover {
+    color: #e50914;
+}
+.trending-info-navbar-menu::before , .trending-info-navbar-menu::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: ' ';
+}
+.trending-info-navbar-menu::before {
+    width: 0;
+    height: 3px;
+    background-color: #e50914;
+    transition: width 0.5s ease-in-out;
+}
+.trending-info-navbar-menu::after {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(83, 100, 141, 0) 0%, rgba(218, 64, 60, 0.3) 85%);
+    opacity: 0;
+    transition: opacity 0.8s linear;
+}
+.show-trending-info-navbar-menu-effects::before {
+    width: 100%;
+}
+.show-trending-info-navbar-menu-effects::after {
+    opacity: 1;
+}
+.trending-info-area-bg-container {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+.trending-info-area-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding: 0 7px;
+}
+.trending-info-area-bg-0 {
+    background-image: url("./../../img/trending/01.jpg");
+}
+.trending-info-area-bg-1 {
+    background-image: url("./../../img/trending/02.jpg");
+}
+.trending-info-area-bg-2 {
+    background-image: url("./../../img/trending/03.jpg");
+}
+.trending-info-area-bg-3 {
+    background-image: url("./../../img/trending/04.jpg");
+}
+.trending-info-area-bg-4 {
+    background-image: url("./../../img/trending/05.jpg");
+}
+.trending-info-area-bg-5 {
+    background-image: url("./../../img/trending/06.jpg");
+}
+.trending-info-area-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 36, 36, 0.8);
+}
+.trending-info-wrapper-overview {
+    background-color: rgba(36, 36, 36, 0);
+    background-image: linear-gradient(90deg, rgba(20, 20, 20, 1) 0%, rgba(36, 36, 36, 1) 30%, rgba(83, 100, 141, 0) 95%);
+}
+.selected-trendig-info-wrapper-bg {
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.unhide-selected-trendig-info-wrapper-bg {
+    display: flex;
+}
+.show-selected-trendig-info-wrapper-bg {
+    opacity: 1;
+}
+
+.trending-info-wrapper {
+    padding: 60px 50px;
+    -moz-transform: translateY(2000px);
+    transform: translateY(2000px);
+}
+.trending-info-wrapper-show-effect {
+    animation-name: trending-info-wrapper-show-effect;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.trending-area-movie-name {
+    font-size: 60px;
+    line-height: 100px;
+    margin: 15px 0;
+}
+.trending-extra-info-top-part , .trending-extra-info-bottom-part , .play-now-my-list-container , .trending-episodes-extra-info-top-part {
+    display: flex;
+    align-items: center;
+}
+.trending-film-rating {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    background-color: #6c757d;
+}
+.trending-movie-seasons {
+    font-size: 14px;
+    color: #fff;
+}
+.trending-movie-date {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 30px;
+}
+.trending-movie-date::before {
+    content: ' ';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 6px / 2);
+    left: calc(30px / 2 - 6px / 2);
+}
+.trending-extra-info-bottom-part {
+    margin: 1.5rem 0;
+}
+.trending-top-10-discription {
+    margin-left: 1rem;
+    color: #d1d0cf;
+    font-size: 14px;
+}
+.trending-movie-discription {
+    width: 35%;
+    margin-bottom: 30px;
+}
+.play-now-my-list-container {
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+.trending-area-play-now {
+    margin: 0 0.5rem 0 0;
+}
+.trending-area-play-now .links{
+    padding: 9px 30px;
+}
+.trending-area-play-now-text {
+    letter-spacing: 0;
+}
+.my-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 9px 30px;
+    cursor: pointer;
+}
+.my-list:hover .my-list-text {
+    color: #e50914;
+}
+.my-list:hover .add-my-list-icon::before {
+    color: #e50914;
+}
+.my-list-text {
+    color: #fff;
+    font-size: 15px;
+    padding-left: 0.5rem;
+    transition: all .3s ease-in-out;
+}
+.add-my-list-icon::before {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+}
+
+.trending-episodes-extra-info-top-part {
+    margin-bottom: 1.5rem;
+}
+
+.trending-episode-selection-season {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-color: #141414;
+}
+.trending-episode-selected-season {
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px 0 10px;
+    cursor: pointer;
+}
+.trending-episode-selected-season-text {
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.trending-episode-selection-season-icon-arrow-down::before {
+    width: 14px;
+    height: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 1.2px;
+    position: absolute;
+    top: calc(50% - 14px / 2);
+    right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform .3s ease-in-out;
+}
+.trending-episode-selection-season-icon-arrow-top::before {
+    -moz-transform: rotate(-180deg);
+    transform: rotateZ(-180deg);
+}
+.trending-episode-selection-options-season {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+    background-color: #191919;
+    box-shadow: 0 12px 34px rgb(19, 10, 10);
+    transition: top .5s ease-in-out;
+}
+.trending-episode-selection-options-season::-webkit-scrollbar {
+    width: 5px;
+}
+.trending-episode-selection-options-season::-webkit-scrollbar-track {
+    background-color: #191919;
+}
+.trending-episode-selection-options-season::-webkit-scrollbar-thumb {
+    background-color: #bf000a;
+    border-radius: 999px;
+}
+.trending-episode-selection-search-bar-season-container {
+    padding: 4px;
+    position: relative;
+}
+.trending-episode-selection-search-bar-season {
+    background-color: rgba(85, 85, 85, 0.65);
+    color: #fff;
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: 48px;
+    padding: 0 22px 0 4px;
+}
+.trending-episode-selection-search-bar-season-eraser {
+    display: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15.2px; 
+    position: absolute;
+    right: 8px;
+    top: calc(50% - 15.2px / 2); 
+}
+.trending-episode-selection-search-bar-season-eraser::before {
+    color: #e50914;
+    font-size: 15px;
+}
+.trending-episode-selection-option-season-value {
+    color: #fff;
+    font-size: 14px;
+    padding: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+.trending-episode-selection-option-season-value:hover , .trending-episode-selected-option-season-value {
+    background-color: #e50914;
+}
+.trending-info-swipers {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.trending-info-swiper-slide-bg-container {
+    position: relative;
+    line-height: 0.1;
+}
+.trending-info-swiper-slide-play {
+    display: none;
+    position: absolute;
+    top: calc(50% - 45px / 2);
+    left: calc(50% - 45px / 2);
+    width: 45px;
+    height: 45px;
+}
+.trending-info-swiper-slide-play::before {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #e50914;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-info-swiper-slide-info {
+    padding: 15px;
+    background-color: #141414;
+}
+.trending-info-swiper-slide-episode-number-time-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.trending-info-swiper-slide-episode-number {
+    color: #d1d0cf;
+    transition: all .5s ease-in-out;
+}
+.trending-info-swiper-slide-episode-number:hover {
+    color: #e50914;
+}
+.trending-info-swiper-slide-episode-time {
+    font-size: 14px;
+    color: #e50914;
+}
+.trending-info-swiper-slide-discription {
+    color: #d1d0cf;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color .3s ease-in-out;
+}
+.selected-trending-info-swiper-slide-discription {
+    color: #fff;
+}

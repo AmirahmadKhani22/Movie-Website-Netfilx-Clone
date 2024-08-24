@@ -1,0 +1,10 @@
+@import url('./no-responsive/style-no-res.css');
+@import url('./no-responsive/navbar.css');
+@import url('swiper/css');
+@import url('swiper/css/navigation');
+@import url('./no-responsive/header.css');
+@import url('./no-responsive/main-sliders.css');
+@import url('./no-responsive/main-trending-movies.css');
+@import url('./no-responsive/main-high-rate-movie.css');
+@import url('./no-responsive/main-trending.css');
+@import url('./no-responsive/footer.css');

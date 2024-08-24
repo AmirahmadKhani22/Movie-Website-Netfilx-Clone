@@ -1,0 +1,64 @@
+.high-rate-imbd-movie-container {
+    padding: 100px;
+    width: 100%;
+    position: relative;
+    background-image: url('./../../img/parallax/avatar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    margin-bottom: 40px;
+}
+.high-rate-imbd-movie-container::before {
+    content: ' ';
+    width: 100%;
+    height: calc(100% + 3px);
+    position: absolute;
+    top: -1.5px;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0 , 0 , 0 , 0.8);
+}
+.high-rate-imbd-title {
+    font-size: 50px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.high-rate-imbd-info-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+}
+.high-rate-imbd-rating-container , .high-rate-imbd-extra-info-pair-bottom{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.high-rate-imbd-rating-imbd {
+    margin-left: 1rem;
+}
+.high-rate-imbd-discription {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.high-rate-imbd-more-detail {
+    margin-left: 5px;
+}
+.high-rate-imbd-links-block {
+    padding: 9px 30px;
+}
+.high-rate-imbd-movie-bg-container {
+    flex: 2;
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+}
+.high-rate-imbd-movie-bg {
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0 , 0 , 0 , 0.6);
+}

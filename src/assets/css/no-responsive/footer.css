@@ -1,0 +1,91 @@
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 100px;
+}
+.links-discription-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 15px 0 5px;
+}
+.footer-menu-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.footer-links-menu {
+    margin-right: 30px;
+}
+.footer-links-menu:last-child {
+    margin: 0;
+}
+.footer-menu-text{
+    color: #d1d0cf;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+}
+.footer-discription{
+    color: #d1d0cf;
+    font-size: 14px;
+}
+.footer-social-medias-container {
+    flex: 1;
+    padding: 10px 5px 0;
+}
+.footer-follow-us , .footer-netflix-app {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1em;
+    font-weight: 900;
+    color: #fff;
+}
+.footer-social-medias-wrapper {
+    display: flex;
+    align-items: center;
+}
+.footer-social-media::before {
+    color: #fff;
+    font-size: 22px;
+    transition: all .4s ease-in-out;
+}
+#footer-facebook::before {
+    font-size: 18px;
+}
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(41, 41, 41, 0.76);
+    border-radius: 50%;
+    margin-right: 12px;
+    transition: all .4s ease-in-out;
+}
+.footer-social-media:hover {
+    box-shadow: 0 0 10px #bf000a;
+}
+.footer-social-media:hover::before{
+    color: #bf000a;
+}
+.footer-applications-container {
+    flex: 1.35;
+    padding: 10px 5px 0;
+}
+.footer-netflix-app {
+    font-style: italic;
+}
+.app-stores-links-container {
+    display: flex;
+    align-items: center;
+}
+.footer-odd-app-stores-links {
+    margin-left: 1rem;
+}
+/*.app-store , .google-play {
+    width: 100%
+}*/

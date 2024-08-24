@@ -1,0 +1,7 @@
+@import url('./font-faces.css');
+@import url('./variables.css');
+@import url('./icons.css');
+@import url('./animations.css');
+@import url('swiper/css/pagination');
+@import url('./no-responsive.css');
+@import url('./responsive/media-queries.css');
