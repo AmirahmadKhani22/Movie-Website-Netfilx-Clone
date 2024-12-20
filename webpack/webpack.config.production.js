@@ -65,9 +65,13 @@ config.optimization = {
         })
     ],
 }
-
+config.performance = {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+}
 config.devServer.static = {
-    directory: path.resolve("./" , 'build'),
+    directory: path.resolve(__dirname , ".." ,'build'),
 }
 config.devServer.compress = true
 config.devServer.port = 4002
