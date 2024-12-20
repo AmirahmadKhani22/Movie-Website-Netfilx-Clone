@@ -85,7 +85,7 @@ module.exports = {
         HtmlWebpackPlugin: {
             constructor: HtmlWebpackPlugin,
             config: {
-                template: path.resolve("./" , "index.html"),
+                template: path.resolve("./src/page" , "index.html"),
                 minify: true,
             },
         }
