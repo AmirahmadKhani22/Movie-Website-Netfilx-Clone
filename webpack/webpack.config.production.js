@@ -16,6 +16,9 @@ config.plugins = addPlugins(baseConfig.plugins , config.plugins).concat([
     new TerserPlugin(), 
 ])
 
+const SRC_IMAGE_FORMAT = "jpg"
+const DEST_IMAGE_FORMAT = "png"
+
 config.optimization = {
     minimize: true,
     minimizer: [
@@ -34,42 +37,32 @@ config.optimization = {
         }), 
         new TerserPlugin(),
         new ImageMinimizerPlugin({
-            minimizer: [{
-                implementation: ImageMinimizerPlugin.imageminMinify,
-                options: {
-                    plugins: [
-                        ["gifsicle", { interlaced: true }],
-                        ["jpegtran" , { progressive: true }],
-                        ["optipng" , { optimizationLevel: 5 }],
-                        /*["svgo" , {
-                                plugins: [
-                                    {
-                                        name: "preset-default",
-                                        params: {
-                                            overrides: {
-                                                removeViewBox: false,
-                                                addAttributesToSVGElement: {
-                                                    attributes: [
-                                                        { xmlns: "http://www.w3.org/2000/svg" },
-                                                    ],
-                                                },
-                                            },
-                                        },
-                                    }
-                                ],
+            generator: [
+                {
+                    preset: DEST_IMAGE_FORMAT,
+                    filename: "img/[name]-[contenthash][ext]",
+                    implementation: ImageMinimizerPlugin.sharpGenerate,
+                    options: {
+                        encodeOptions: {
+                            [DEST_IMAGE_FORMAT]: {
+                                quality: 100,
                             }
-                        ],*/
-                    ],
+                        },
+                    },
                 },
-            }],
-            /*generator: [{
-                preset: "webp",
-                implementation: ImageMinimizerPlugin.imageminGenerate,
-                options: {
-                    plugin: ["imagemin-webp"]
-                }
-            }]*/
-        }) 
+                {
+                    preset: SRC_IMAGE_FORMAT,
+                    implementation: ImageMinimizerPlugin.sharpGenerate,
+                    options: {
+                        encodeOptions: {
+                            [SRC_IMAGE_FORMAT]: {
+                                quality: 100,
+                            }
+                        },
+                    },
+                },
+            ],
+        })
     ],
 }
 
