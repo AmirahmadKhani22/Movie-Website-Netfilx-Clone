@@ -31,7 +31,6 @@ class TrendingEvents {
         
         const bg = $(".trending-info-area-bg-container")
         if(+bg.css("opacity")){
-            console.log(1)
             bg.css("opacity" , "0")
             bg.fadeTo(1000 , 1 , "swing")
         }
