@@ -42,6 +42,7 @@
     "imagemin-svgo": "^11.0.0",
     "imagemin-webp": "^8.0.0",
     "mini-css-extract-plugin": "^2.8.1",
+    "sharp": "^0.33.5",
     "style-loader": "^3.3.4",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.91.0",
