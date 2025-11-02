@@ -1,8 +1,51 @@
-After downloading project,
-go to project directory,
-execute following commands in your cli, in order:
-  npm i  # install dependencies and dev-dependencies
-  npm run start  # run project on live server on development mode
-  npm run dev-build  # build project on development mode
-  npm run build  # build project on production mode
-  npm run final  # run project on live server on production mode
+# 🎬 Movie Website - Netflix Clone
+
+یک پروژه کلون زیبا و واکنش‌گرا از Netflix با طراحی مدرن و امکانات کامل
+
+![UI Image](./ui.png)
+
+## ✨ ویژگی‌های پروژه
+
+### 🎨 طراحی و رابط کاربری
+- **طراحی مدرن و جذاب** با الهام از Netflix
+- **کاملاً واکنش‌گرا** (Responsive) برای تمام دستگاه‌ها
+- **استفاده از Flexbox و Grid** برای چیدمان پیشرفته
+- **انیمیشن‌ها و ترنزیشن‌های زیبا**
+- **رنگ‌بندی حرفه‌ای** مشابه Netflix
+
+### 🛠 تکنولوژی‌های استفاده شده
+
+#### Frontend
+- **HTML5** - ساختار semantic و بهینه
+- **CSS3 / Flexbox** - استایل‌دهی پیشرفته با Flexbox و Grid
+- **ES6+** - جاوااسکریپت مدرن با قابلیت‌های جدید
+- **jQuery** - تعاملات کاربری روان
+
+#### Build Tools
+- **Webpack** - مدیریت وابستگی‌ها و bundle کردن
+- **Babel** - ترنسپایل کدهای ES6+
+- **Webpack Loaders** - پردازش فایل‌های CSS و تصاویر
+
+## 🚀 نحوه اجرای پروژه
+
+### پیش‌نیازها
+- Node.js (ورژن 14 یا بالاتر)
+- npm یا yarn
+
+### نصب و اجرا
+
+```bash
+# کلون کردن ریپوزیتوری
+git clone https://github.com/AmirahmadKhani22/Movie-Website-Netfilx-Clone.git
+
+# ورود به دایرکتوری پروژه
+cd Movie-Website-Netfilx-Clone
+
+# نصب dependencies
+npm install
+
+# اجرای پروژه در حالت توسعه
+npm run start
+
+# ساخت نسخه production
+npm run build
